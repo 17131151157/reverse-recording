@@ -11,7 +11,9 @@ import requests, httpx, aiohttp
     # 异步请求：httpx共花费时间：（1000请求结果： 连接池耗尽报错）
 # aiohttp 仅支持异步请求
     # aiohttp共花费时间： 2.5330536365509033（100请求）
-    # 异步请求：aiohttp共花费时间： 33.35934281349182：（1000请求结果）
+    # 异步请求：aiohttp共花费时间： 33.35934281349182：（1000请求结果,windows电脑）
+    # 异步请求：aiohttp共花费时间： 10.466634035110474：（1000请求结果,Mac电脑）
+
 
 
 headers = {
@@ -79,7 +81,7 @@ async def spiders(i, client):
 
 async def aiohttp_http():
     start = time.time()
-    async with aiohttp.ClientSession(headers=headers) as client:
+    async with aiohttp.ClientSession(headers=headers, connector=aiohttp.TCPConnector(ssl=False)) as client:
         tasks = []
         for i in range(1000):
             tasks.append(asyncio.create_task(spiders(i, client)))
