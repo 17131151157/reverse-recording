@@ -4,6 +4,12 @@
     <option name="conversations">
       <list>
         <Conversation>
+          <option name="createTime" value="1742784229369" />
+          <option name="id" value="0195c608eff976d988871a77df4b3be1" />
+          <option name="title" value="新对话 2025年3月24日 10:43:49" />
+          <option name="updateTime" value="1742784229369" />
+        </Conversation>
+        <Conversation>
           <option name="createTime" value="1742482403053" />
           <option name="id" value="0195b40b6eed7991babb9d2890c7fd79" />
           <option name="title" value="@workspace /comments " />
@@ -105,9 +111,6 @@
                   <list />
                 </option>
                 <option name="conversationId" value="0195b42dbc087cd2aef936b367dcf1e6" />
-                <option name="historyDocumentMap">
-                  <map />
-                </option>
                 <option name="messageId" value="0195b42dbc08766eb56b36801377ece3" />
                 <option name="question" value="&#10;```&#10;&#10;```" />
                 <option name="rating" value="UNRATED" />
@@ -124,9 +127,6 @@
                   <list />
                 </option>
                 <option name="conversationId" value="0195b42de851764f98d1002bf2c9f049" />
-                <option name="historyDocumentMap">
-                  <map />
-                </option>
                 <option name="messageId" value="0195b42de8517932a7e14a54df096fab" />
                 <option name="question" value="&#10;```&#10;&#10;```" />
                 <option name="rating" value="UNRATED" />
