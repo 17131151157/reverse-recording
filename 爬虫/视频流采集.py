@@ -147,35 +147,35 @@ with open('test.mp4','ab+') as file :
 
 
 
-import subprocess
-
-def convert_ts_to_mp4(input_file, output_file):
-    """
-    将 TS 文件转换为 MP4 文件
-    :param input_file: 输入的 TS 文件路径
-    :param output_file: 输出的 MP4 文件路径
-    """
-    try:
-        # 使用 ffmpeg 命令进行转换
-        command = [
-            'ffmpeg',          # 调用 ffmpeg
-            '-i', input_file,  # 输入文件
-            '-c:v', 'copy',    # 视频编码器直接复制（不重新编码）
-            '-c:a', 'aac',     # 音频编码器使用 AAC
-            output_file        # 输出文件
-        ]
-
-        # 执行命令
-        subprocess.run(command, check=True)
-        print(f"转换成功！文件已保存为: {output_file}")
-    except subprocess.CalledProcessError as e:
-        print(f"转换失败: {e}")
-    except FileNotFoundError:
-        print("未找到 ffmpeg，请确保已安装 ffmpeg 并添加到系统环境变量中。")
-
-# 示例用法
-if __name__ == '__main__':
-
-    input_ts = "test.ts"  # 输入的 TS 文件路径
-    output_mp4 = "output.mp4"  # 输出的 MP4 文件路径
-    convert_ts_to_mp4(input_ts, output_mp4)
+# import subprocess
+#
+# def convert_ts_to_mp4(input_file, output_file):
+#     """
+#     将 TS 文件转换为 MP4 文件
+#     :param input_file: 输入的 TS 文件路径
+#     :param output_file: 输出的 MP4 文件路径
+#     """
+#     try:
+#         # 使用 ffmpeg 命令进行转换
+#         command = [
+#             'ffmpeg',          # 调用 ffmpeg
+#             '-i', input_file,  # 输入文件
+#             '-c:v', 'copy',    # 视频编码器直接复制（不重新编码）
+#             '-c:a', 'aac',     # 音频编码器使用 AAC
+#             output_file        # 输出文件
+#         ]
+#
+#         # 执行命令
+#         subprocess.run(command, check=True)
+#         print(f"转换成功！文件已保存为: {output_file}")
+#     except subprocess.CalledProcessError as e:
+#         print(f"转换失败: {e}")
+#     except FileNotFoundError:
+#         print("未找到 ffmpeg，请确保已安装 ffmpeg 并添加到系统环境变量中。")
+#
+# # 示例用法
+# if __name__ == '__main__':
+#
+#     input_ts = "test.ts"  # 输入的 TS 文件路径
+#     output_mp4 = "output.mp4"  # 输出的 MP4 文件路径
+#     convert_ts_to_mp4(input_ts, output_mp4)
