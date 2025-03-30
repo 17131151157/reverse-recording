@@ -185,9 +185,55 @@
                   <list />
                 </option>
               </Turn>
+              <Turn>
+                <option name="agent" value="workspace" />
+                <option name="answer" value="```Kbgslm&#10;# 使用YvzfgrufoHlfk的hvovxg方法选择具有特定XHH类的元素&#10;# 这里选择的是wre标签，类名为x-xlmgzrmvi ckzgs-olt mvd-knw，其中包含s6标签，类名为ggh-grgov，以及z标签&#10;ivhfogh = hlfk.hvovxg('wre.x-xlmgzrmvi.ckzgs-olt.mvd-knw s6.ggh-grgov z')&#10;&#10;# 遍历查询结果，这些结果很可能是搜索结果或者是页面上的链接列表&#10;# 目的是过滤掉百度广告，只打印出非广告的内容&#10;uli ivhfog rm ivhfogh:&#10;   # 打印出链接的文本内容，先去除空格和换行符，然后打印出链接的sivu属性值&#10;   # 这样做可以使得输出的内容更加整洁，便于阅读和分析&#10;   kirmg(ivhfog.gvcg.ivkozxv(' ','').ivkozxv('\m',''), ivhfog.tvg('sivu'))&#10;   # 第一个ivkozxv()是去掉文本中的空格，第二个ivkozxv()是去掉文本中的换行符&#10;```&#10;&#10;请注意，这段代码的目的是从网页中提取信息，并且尝试过滤掉可能是广告的内容。在实际应用中，过滤广告可能需要更复杂的逻辑，因为广告内容可能会有多种形式，而且可能会随着时间变化。此外，这段代码假设所有的`z`标签都不是广告，这在实际情况中可能不成立。更精确的过滤可能需要检查页面的其他元素或者使用特定的ZKR来判断内容是否为广告。" />
+                <option name="chatResource" value="codeAction" />
+                <option name="codeReferences">
+                  <list>
+                    <CodeReferencesBean>
+                      <option name="content" value="ivhfogh = hlfk.hvovxg('wre.x-xlmgzrmvi.ckzgs-olt.mvd-knw s6.ggh-grgov z')&#10;# 过滤百度广告&#10;uli ivhfog rm ivhfogh:&#10;   kirmg(ivhfog.gvcg.ivkozxv(' ','').ivkozxv('\m',''),ivhfog.tvg('sivu'))&#10;   # 第一个ivkozxv()是去掉空格的同时将空格替换为空，第二个ivkozxv()是去掉换行符，把换行符转换为空&#10;&#10;&#10;" />
+                      <option name="end_line" value="40" />
+                      <option name="filename" value="bs4解析库.py" />
+                      <option name="language" value="Python" />
+                      <option name="range">
+                        <Range>
+                          <option name="end">
+                            <Position>
+                              <option name="line" value="40" />
+                            </Position>
+                          </option>
+                          <option name="start">
+                            <Position>
+                              <option name="line" value="35" />
+                            </Position>
+                          </option>
+                        </Range>
+                      </option>
+                      <option name="start_line" value="35" />
+                      <option name="type" value="editor" />
+                      <option name="url" value="file:///E:/AI_large_model/reverse-recording/爬虫/bs4解析库.py" />
+                    </CodeReferencesBean>
+                  </list>
+                </option>
+                <option name="command" value="comments" />
+                <option name="conversationId" value="0195b46422ef7beeb528bcdaeb8414c3" />
+                <option name="historyDocumentMap">
+                  <map>
+                    <entry key="file:///E:/AI_large_model/reverse-recording/爬虫/bs4解析库.py" value="# beautifulsoup4&#10;# 安装：pip install beautifulsoup4 -i https://pypi.tuna.tsinghua.edu.cn/simple&#10;# lxml&#10;# 安装：pip install lxml -i https://pypi.tuna.tsinghua.edu.cn/simple&#10;# html5lib&#10;# 安装：pip install html5lib -i https://pypi.tuna.tsinghua.edu.cn/simple&#10;#&#10;# 1. 导入 bs4 库&#10;import bs4&#10;# 导入lmxl库&#10;import lxml&#10;import requests&#10;&#10;&#10;&#10;url = 'https://www.baidu.com/s?wd=python'&#10;headers = {&#10;    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',&#10;    'cookie': 'BAIDUID=D4818D945BDEB541EDD4C5359BCE5C1C:FG=1; BIDUPSID=D4818D945BDEB541EDD4C5359BCE5C1C; PSTM=1740023672; ZFY=p10spoZt6jbpD1FRRMyjf:B4uv2WjHWZSlgf7WeStHwU:C; BAIDUID_BFESS=D4818D945BDEB541EDD4C5359BCE5C1C:FG=1; BDUSS=J2dGNJb1A4S1l-Y2FZQTNENE04YXcybnF2MXROanZKeEFNeWFzeTZFa3BodjluSVFBQUFBJCQAAAAAAAAAAAEAAAAc7RO6bnhueGtreGtjbmZubmYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACn512cp-ddnbm; BDUSS_BFESS=J2dGNJb1A4S1l-Y2FZQTNENE04YXcybnF2MXROanZKeEFNeWFzeTZFa3BodjluSVFBQUFBJCQAAAAAAAAAAAEAAAAc7RO6bnhueGtreGtjbmZubmYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACn512cp-ddnbm; H_PS_PSSID=60271_61027_62340_62347_62368_62370_62422_62473_62485_62522_62457_62455_62453_62450_62327_62639_62644_62674; BD_UPN=12314753; BA_HECTOR=8k00ak01a5042gaka4agak85a4i2dn1jtoebt23; BDRCVFR[feWj1Vr5u3D]=I67x6TjHwwYf0; BD_CK_SAM=1; PSINO=3; delPer=0; H_PS_645EC=2d88UJo6x%2Fd2qXroulCmH71NJy2tq2CTBmIbSkFpLcw2S4aTOTTpuahsyQ1m5DJc6V2%2B; BDSVRTM=273; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; baikeVisitId=f0d89a26-2bf2-469d-a0fa-8d624033174f; COOKIE_SESSION=2462239_0_0_1_1_1_1_0_0_1_20_0_0_0_0_0_1740023683_0_1742485917%7C2%230_0_1742485917%7C1; WWW_ST=1742485961282'&#10;}&#10;&#10;&#10;# 2. 发起请求&#10;response = requests.get(url, headers=headers)&#10;response.encoding = 'utf-8'&#10;# 3. 解析响应内容&#10;# 3.1 创建 bs4.BeautifulSoup 对象&#10;soup = bs4.BeautifulSoup(response.text, 'lxml')&#10;&#10;&#10;&quot;&quot;&quot;&#10;CSS选择器  class == .  id == #  &#10;父标签在前  子/后代标签在后&#10;&quot;&quot;&quot;&#10;&#10;results = soup.select('div.c-container.xpath-log.new-pmd h3.tts-title a')&#10;# 过滤百度广告&#10;for result in results:&#10;   print(result.text.replace(' ','').replace('\n',''),result.get('href'))&#10;   # 第一个replace()是去掉空格的同时将空格替换为空，第二个replace()是去掉换行符，把换行符转换为空&#10;&#10;&#10;" />
+                  </map>
+                </option>
+                <option name="messageId" value="0195b46422ef73a7acb42f744c66c3d8" />
+                <option name="question" value="" />
+                <option name="rating" value="UNRATED" />
+                <option name="referenceBeans">
+                  <list />
+                </option>
+                <option name="status" value="SUCCESS" />
+              </Turn>
             </list>
           </option>
-          <option name="updateTime" value="1742484745232" />
+          <option name="updateTime" value="1742488246187" />
         </Conversation>
       </list>
     </option>
