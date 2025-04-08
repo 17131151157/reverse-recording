@@ -6,12 +6,13 @@
 # 安装：pip install html5lib -i https://pypi.tuna.tsinghua.edu.cn/simple
 #
 # 1. 导入 bs4 库
+
+
 import bs4
 # 导入lmxl库
 import lxml
 import requests
-
-
+from lxml import etree
 
 url = 'https://www.baidu.com/s?wd=python'
 headers = {
@@ -26,15 +27,30 @@ response.encoding = 'utf-8'
 # 3. 解析响应内容
 # 3.1 创建 bs4.BeautifulSoup 对象
 soup = bs4.BeautifulSoup(response.text, 'lxml')
-
+soups = etree.HTML(response.text)
 
 """
 CSS选择器  class == .  id == #  
 父标签在前  子/后代标签在后
 """
+
+"""
+Xpath解析器
+// 从当前节点开始查找或者当前节点的子节点开始查找
+/  从当前节点开始查找
+//div[@class="result c-container xpath-log new-pmd"]//h3/a   严格匹配必须从头到尾一样
+@可以是任意属性
+//div[contains@class,"result c-container xpath-log new-pmd"]  属性包含就可以
+//div[starts-with@class,"result c-container xpath-log new-pmd"]  属性以什么开头
+"""
 # 使用BeautifulSoup的select方法选择具有特定CSS类的元素
 # 这里选择的是div标签，类名为c-container xpath-log new-pmd，其中包含h3标签，类名为tts-title，以及a标签
 results = soup.select('div.c-container.xpath-log.new-pmd h3.tts-title a')
+# 使用xpath
+results1=soups.xpath('//div[@class="result c-container xpath-log new-pmd"]//h3/a')
+# /text()  获取文本只获取当前节点的文本内容
+# //text()  获取文本获取当前节点以及所有子节点的文本内容
+# /string()  获取文本获取当前节点以及所有子节点的文本内容
 # # 遍历查询结果，这些结果很可能是搜索结果或者是页面上的链接列表
 # # 目的是过滤掉百度广告，只打印出非广告的内容
 for result in results:
@@ -43,4 +59,6 @@ for result in results:
    print(result.text.replace(' ','').replace('\n',''),result.get('href'))
    # 第一个replace()是去掉文本中的空格，第二个replace()是去掉文本中的换行符
 
-
+for result in results1:
+    print(result.xpath('string()'))
+    # 在这里使用string()方法，可以获取到当前节点以及所有子节点的文本内容
